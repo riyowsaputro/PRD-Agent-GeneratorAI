@@ -42,8 +42,6 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .lbig{font-size:22px;font-weight:800;background:linear-gradient(135deg,var(--ac),#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .lspin{width:32px;height:32px;border:3px solid var(--bd);border-top-color:var(--ac);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* Intro */
 .intro{position:fixed;inset:0;z-index:500;display:flex;align-items:flex-start;justify-content:center;background:linear-gradient(135deg,#312e81,#4f46e5 30%,#7c3aed 60%,#a78bfa);overflow-y:auto;padding:16px}
 .intro.out{animation:iO .4s ease-in forwards}
 @keyframes iO{to{opacity:0;transform:scale(1.03)}}
@@ -70,8 +68,10 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .icta{display:inline-flex;gap:6px;padding:10px 32px;background:#fff;color:#4f46e5;border-radius:var(--rl);font-size:14px;font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.12)}.icta:hover{transform:translateY(-1px)}
 .iskip{display:block;margin:10px auto 0;color:rgba(255,255,255,.5);font-size:12px}
 @keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-
-/* Tutorial */
+.mroute{display:flex;flex-direction:column;gap:4px;margin-top:8px;font-size:11px;color:rgba(255,255,255,.65);text-align:left;background:rgba(255,255,255,.05);border-radius:var(--rm);padding:8px 10px}
+.mroute-r{display:flex;align-items:center;gap:6px}.mroute-b{font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;text-transform:uppercase}
+.mroute-b.ch{background:rgba(99,102,241,.3);color:#c4b5fd}.mroute-b.gn{background:rgba(16,185,129,.3);color:#6ee7b7}
+.mroute-fb{font-size:10px;color:rgba(255,255,255,.4);padding-left:44px}
 .tov{position:fixed;inset:0;z-index:200;display:none}.tov.on{display:block}
 .tbk{position:fixed;inset:0;z-index:201;background:rgba(0,0,0,.55)}
 .tsp{position:fixed;z-index:202;border-radius:var(--rm);box-shadow:0 0 0 4px rgba(99,102,241,.5);background:rgba(255,255,255,.05);transition:all .3s;pointer-events:none}
@@ -84,8 +84,6 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .tbtn{padding:6px 14px;border-radius:var(--rm);font-size:12px;font-weight:600;cursor:pointer}
 .tnxt{background:var(--ac);color:#fff}.tnxt:hover{background:var(--ach)}.tprv{color:var(--ts)}
 .tskp{display:block;margin:0 auto;color:var(--tt);font-size:11px;padding:4px 12px;border:1px solid var(--bd);border-radius:var(--rm);cursor:pointer}
-
-/* Sidebar */
 .sb{width:var(--sw);min-width:var(--sw);background:var(--bsb);display:flex;flex-direction:column;transition:margin-left .25s;z-index:40}.sb.off{margin-left:calc(-1*var(--sw))}
 .sb-h{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
 .sb-h h2{font-size:13px;font-weight:600;color:var(--tsba);text-transform:uppercase;letter-spacing:.05em}
@@ -98,8 +96,6 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .sbb{display:flex;align-items:center;gap:8px;width:100%;padding:7px 12px;border-radius:var(--rm);color:var(--tsb);font-size:12px}.sbb:hover{background:var(--bsbh);color:var(--tsba)}
 .sbdv{border:none;border-top:1px solid rgba(255,255,255,.06);margin:4px 0}
 .sb-sig{text-align:center;font-size:9px;color:rgba(255,255,255,.25);padding:8px 0 4px;border-top:1px solid rgba(255,255,255,.04);margin-top:4px}
-
-/* Main layout */
 .mn{flex:1;display:flex;flex-direction:column;min-width:0;overflow:hidden}
 .hdr{height:var(--hh);min-height:var(--hh);display:flex;align-items:center;padding:0 12px;background:var(--bf);border-bottom:1px solid var(--bd);gap:8px;z-index:30}
 .hl{display:flex;align-items:center;gap:8px;flex-shrink:0}
@@ -111,13 +107,12 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .bi{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:var(--rm);color:var(--ts)}.bi:hover{background:var(--bs);color:var(--tp)}
 .hlg{display:flex;background:var(--bs);border-radius:var(--rs);padding:2px;margin-right:2px}
 .hlgb{padding:3px 8px;border-radius:4px;font-size:11px;font-weight:600;color:var(--tt);cursor:pointer}.hlgb.on{background:var(--bf);color:var(--tp);box-shadow:var(--ss)}
+.tkn{font-size:10px;color:var(--tt);padding:2px 8px;background:var(--bs);border-radius:99px;white-space:nowrap;font-weight:500;cursor:default;margin-right:2px;user-select:none}
 .mtbs{display:none;background:var(--bs);border-radius:var(--rm);padding:2px;margin-right:4px}
 .mtb{padding:5px 12px;border-radius:var(--rs);font-size:11px;font-weight:500;color:var(--ts);position:relative;white-space:nowrap}.mtb.on{background:var(--bf);color:var(--tp);box-shadow:var(--ss)}
 .mtb.pulse::after{content:'';position:absolute;top:3px;right:3px;width:7px;height:7px;border-radius:50%;background:var(--ac);animation:pls .8s ease 4}
 @keyframes pls{0%,100%{opacity:1}50%{opacity:.4;transform:scale(1.3)}}
 .cnt{flex:1;display:flex;overflow:hidden}
-
-/* Chat panel */
 .chat{flex:1;display:flex;flex-direction:column;min-width:300px;overflow:hidden;background:var(--bp)}
 .msgs{flex:1;overflow-y:auto;padding:20px 16px;display:flex;flex-direction:column;gap:16px}
 .msg{display:flex;gap:10px;max-width:680px;animation:mi .2s ease-out}.msg-u{align-self:flex-end;flex-direction:row-reverse}.msg-a{align-self:flex-start}
@@ -134,13 +129,15 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .msg-ct blockquote{border-left:3px solid var(--ac);padding-left:12px;color:var(--ts);margin:8px 0}
 .msg-ct table{border-collapse:collapse;width:100%;margin:8px 0;font-size:12px;display:block;overflow-x:auto}
 .msg-ct th,.msg-ct td{border:1px solid var(--bd);padding:6px 10px;text-align:left;white-space:nowrap}.msg-ct th{background:var(--bs)}
-.msg-tm{font-size:11px;color:var(--tt);padding:0 4px;display:flex;align-items:center;gap:6px}.msg-u .msg-tm{justify-content:flex-end}
+.msg-tm{font-size:11px;color:var(--tt);padding:0 4px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.msg-u .msg-tm{justify-content:flex-end}
+.msg-mdl{font-size:9px;color:var(--tt);background:var(--bs);padding:1px 5px;border-radius:3px;font-family:var(--fm)}
 .msg-err .msg-ct{background:rgba(239,68,68,.08);color:var(--er);border:1px solid rgba(239,68,68,.2)}
 .msg-rg{font-size:11px;color:var(--tt);opacity:0;transition:opacity .15s;padding:2px 6px;border-radius:var(--rs);cursor:pointer}.msg:hover .msg-rg{opacity:.7}.msg-rg:hover{opacity:1!important;background:var(--bs)}
 .msg-retry{background:var(--acl);color:var(--ac);border:1px solid var(--acm);padding:4px 12px;border-radius:var(--rm);font-size:11px;font-weight:600;cursor:pointer;margin-top:4px}
 @keyframes mi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .typ{display:flex;align-items:center;gap:8px;padding:8px 14px;font-size:12px;color:var(--tt)}.typ.hid{display:none}
 .typd{display:flex;gap:3px}.typd span{width:5px;height:5px;background:var(--tt);border-radius:50%;animation:bo 1.2s infinite}.typd span:nth-child(2){animation-delay:.15s}.typd span:nth-child(3){animation-delay:.3s}
+.typmdl{font-size:9px;color:var(--ac);background:var(--acl);padding:1px 6px;border-radius:var(--rs);font-family:var(--fm);white-space:nowrap}
 @keyframes bo{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
 .cin{padding:10px 16px;background:var(--bp);border-top:1px solid var(--bd)}
 .apn{background:var(--acl);border:1px solid var(--acm);border-radius:var(--rl);padding:10px 14px;margin-bottom:8px;display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--ts)}
@@ -155,13 +152,10 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .bstp{background:var(--er);color:#fff}.bstp.hid{display:none}
 .ihnt{font-size:10px;color:var(--tt);margin-top:4px;text-align:right}
 .rsh{width:5px;cursor:col-resize;background:var(--bd);flex-shrink:0;z-index:10}.rsh:hover,.rsh.on{background:var(--ac)}
-
-/* RIGHT PANEL — unified for PRD + Agent files */
 .rpanel{flex:1;display:flex;flex-direction:column;min-width:300px;overflow:hidden;background:var(--bf);border-left:1px solid var(--bd)}
 .rp-top{display:flex;align-items:center;justify-content:space-between;padding:6px 12px;border-bottom:1px solid var(--bd);gap:6px;flex-wrap:wrap;min-height:42px}
 .rp-top-l{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .rp-top-r{display:flex;gap:4px}
-/* File tabs: PRD | system-prompt | workflow | skill */
 .ftabs{display:flex;gap:2px;background:var(--bs);border-radius:var(--rm);padding:2px;overflow-x:auto}
 .ftab{padding:5px 10px;border-radius:var(--rs);font-size:11px;font-weight:600;color:var(--ts);cursor:pointer;white-space:nowrap;transition:all .12s;border:none;background:none}
 .ftab.on{background:var(--bf);color:var(--tp);box-shadow:var(--ss)}
@@ -173,7 +167,6 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .rpcnt{flex:1;overflow-y:auto;padding:20px 24px;position:relative}
 .pemp{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;padding:30px;color:var(--tt)}
 .pemp h3{font-size:15px;font-weight:600;color:var(--ts);margin:12px 0 6px}.pemp p{font-size:12px;max-width:320px;line-height:1.55}
-/* Rendered markdown */
 .pr{font-size:13px;line-height:1.7;color:var(--tp)}
 .pr h1{font-size:22px;font-weight:700;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--bd)}
 .pr h2{font-size:16px;font-weight:600;margin:28px 0 10px;padding:6px 10px;border-left:3px solid var(--ac);background:var(--acl);border-radius:0 var(--rs) var(--rs) 0;cursor:pointer;position:relative}.pr h2:first-child{margin-top:0}.pr h2:hover{background:var(--acm)}
@@ -183,7 +176,6 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .pr table{border-collapse:collapse;width:100%;margin:10px 0;font-size:12px;display:block;overflow-x:auto}
 .pr th,.pr td{border:1px solid var(--bd);padding:6px 10px;text-align:left;min-width:80px}.pr th{background:var(--bs);font-weight:600;white-space:nowrap}
 .pr blockquote{border-left:3px solid var(--ac);padding:6px 14px;margin:10px 0;background:var(--acl);border-radius:0 var(--rs) var(--rs) 0}.pr hr{border:none;border-top:1px solid var(--bd);margin:20px 0}
-/* Agent green accent */
 .pr.agent-doc h2{border-left-color:var(--ag);background:var(--agl)}.pr.agent-doc h2:hover{background:var(--agm)}
 .pr.agent-doc blockquote{border-left-color:var(--ag);background:var(--agl)}
 .praw{font-family:var(--fm);font-size:12px;white-space:pre-wrap;word-wrap:break-word;line-height:1.7}
@@ -210,7 +202,14 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 .tst.out{animation:tO .2s ease-in forwards}
 @keyframes tI{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes tO{to{opacity:0;transform:translateY(-6px)}}
-@media(max-width:768px){.sb{position:fixed;left:0;top:0;bottom:0;z-index:50;box-shadow:var(--sl)}.sb.off{margin-left:calc(-1*var(--sw)-10px)}.sbov{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:45;pointer-events:none;opacity:0}.sbov.show{pointer-events:auto;opacity:1}.mtbs{display:flex!important}.rsh{display:none}.chat{min-width:0}.rpanel{min-width:0;position:absolute;inset:0;top:var(--hh);z-index:5;display:none;border-left:none}.rpanel.mv{display:flex}.chat.mh{display:none}.cnt{position:relative}.hlg{display:none}.isteps{grid-template-columns:repeat(3,1fr)}.ttt{width:260px}.logo-by{display:none}.ftabs{flex-wrap:nowrap;overflow-x:auto}}
+/* Model info in settings */
+.minfo{background:var(--bs);border:1px solid var(--bd);border-radius:var(--rm);padding:10px 12px;font-size:11px;line-height:1.8}
+.minfo-r{display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.minfo-b{font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;text-transform:uppercase;white-space:nowrap}
+.minfo-b.ch{background:var(--acl);color:var(--ac)}.minfo-b.gn{background:var(--agl);color:var(--ag)}
+.minfo-fb{font-size:10px;color:var(--tt);padding-left:60px}
+.minfo code{font-family:var(--fm);font-size:10px;background:var(--bf);padding:1px 4px;border-radius:3px;border:1px solid var(--bd)}
+@media(max-width:768px){.sb{position:fixed;left:0;top:0;bottom:0;z-index:50;box-shadow:var(--sl)}.sb.off{margin-left:calc(-1*var(--sw)-10px)}.sbov{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:45;pointer-events:none;opacity:0}.sbov.show{pointer-events:auto;opacity:1}.mtbs{display:flex!important}.rsh{display:none}.chat{min-width:0}.rpanel{min-width:0;position:absolute;inset:0;top:var(--hh);z-index:5;display:none;border-left:none}.rpanel.mv{display:flex}.chat.mh{display:none}.cnt{position:relative}.hlg{display:none}.isteps{grid-template-columns:repeat(3,1fr)}.ttt{width:260px}.logo-by{display:none}.ftabs{flex-wrap:nowrap;overflow-x:auto}.tkn{font-size:9px;padding:2px 6px}}
 @media print{.sb,.hdr,.chat,.rsh,.rp-top,.sfb,.tc,.modal,.tov{display:none!important}.rpanel{border:none!important;position:static!important;display:flex!important}.rpcnt{padding:20px!important;overflow:visible!important}.pr h1{page-break-after:avoid}.pr h2{page-break-after:avoid;background:none!important;cursor:default!important}.pr table,.pr pre{page-break-inside:avoid}@page{margin:2cm}}
 </style>
 </head>
@@ -221,7 +220,14 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 <div class="ilang"><button class="ilb on" data-lang="en" onclick="setL('en',1)">🇬🇧 EN</button><button class="ilb" data-lang="id" onclick="setL('id',1)">🇮🇩 ID</button></div>
 <div class="ihero"><div class="ibadge">✨ <span data-t="ib">AI PRD + Agent</span></div><h1 data-t="it">Build Better Products</h1><div class="iby">by Rio Saputro</div><p data-t="is">AI builds PRD then generates Agent files to execute it.</p></div>
 <div class="isteps"><div class="istep"><div class="istep-n">Step 1</div><div class="istep-i">💬</div><h3 data-t="s1t">Describe</h3><p data-t="s1d">Your idea</p></div><div class="istep"><div class="istep-n">Step 2</div><div class="istep-i">🎯</div><h3 data-t="s2t">Interview</h3><p data-t="s2d">AI asks+recs</p></div><div class="istep"><div class="istep-n">Step 3</div><div class="istep-i">📄</div><h3 data-t="s3t">PRD</h3><p data-t="s3d">Full document</p></div><div class="istep"><div class="istep-n">Step 4</div><div class="istep-i">🤖</div><h3 data-t="s4t">Agent</h3><p data-t="s4d">3 agent files</p></div><div class="istep"><div class="istep-n">Step 5</div><div class="istep-i">🚀</div><h3 data-t="s5t">Export</h3><p data-t="s5d">Ship it</p></div></div>
-<div class="iapi"><h2 data-t="akt">API Key</h2><p data-t="akd">Uses Gemini AI. Free — 30s.</p><div style="text-align:center;margin-bottom:10px"><a href="https://aistudio.google.com/apikey" target="_blank"><span data-t="gk">Get Key →</span></a></div><div style="margin-bottom:8px"><label data-t="akl">API Key</label><input type="password" id="iak" data-t-placeholder="akp"></div><div><label data-t="ml">Model</label><select id="imd"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-2.5-pro">Gemini 2.5 Pro</option><option value="gemini-2.0-flash">Gemini 2.0 Flash</option></select></div><p class="ihn" data-t="akh">🔒 Browser only.</p></div>
+<div class="iapi"><h2 data-t="akt">API Key</h2><p data-t="akd">Uses Gemini AI. Free — 30s.</p><div style="text-align:center;margin-bottom:10px"><a href="https://aistudio.google.com/apikey" target="_blank"><span data-t="gk">Get Key →</span></a></div>
+<div style="margin-bottom:8px"><label data-t="akl">API Key</label><input type="password" id="iak" data-t-placeholder="akp"></div>
+<div class="mroute">
+  <div class="mroute-r"><span class="mroute-b ch">💬 Chat</span> gemma-4-31b-it</div>
+  <div class="mroute-r"><span class="mroute-b gn">🧠 Create</span> gemini-3.1-flash-lite-preview</div>
+  <div class="mroute-fb">↳ Fallback: gemini-2.5-flash → gemma-4-31b-it</div>
+</div>
+<p class="ihn" data-t="akh">🔒 Browser only.</p></div>
 <div class="icta-a"><button class="icta" onclick="dismissI()">🚀 <span data-t="go">Go!</span></button><button class="iskip" onclick="dismissI()" data-t="sk">Later</button></div>
 </div></div>
 <div id="tov" class="tov"><div class="tbk" id="tbk"></div><div id="tsp" class="tsp"></div><div id="ttp" class="ttt"><div id="tti" class="ttt-i"></div><div id="tts" class="ttt-s"></div><h3 id="tth"></h3><p id="ttx"></p><div class="tnav"><button id="tpv" class="tbtn tprv">←</button><div id="ttd" class="tdots"></div><button id="tnx" class="tbtn tnxt">→</button></div><div style="text-align:center;margin-top:4px"><button id="tsk" class="tbtn tskp">Skip</button></div></div></div>
@@ -230,19 +236,18 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 
 <div class="mn"><header class="hdr"><div class="hl"><button id="bsb" class="bi"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 4h14M2 9h14M2 14h14"></path></svg></button><h1 class="logo">PRD Generator <span class="logo-by">by Rio Saputro</span></h1></div><div class="hc"><span id="sn" class="sname" spellcheck="false"></span></div><div class="hr">
 <div class="mtbs"><button class="mtb on" data-tab="chat">💬</button><button class="mtb" data-tab="docs">📄 Docs</button></div>
+<span id="tkn" class="tkn" title="Estimated tokens used this session">⚡ 0 tok</span>
 <div class="hlg"><button class="hlgb on" data-lang="en">EN</button><button class="hlgb" data-lang="id">ID</button></div>
 <button id="bhlp" class="bi">?</button><button id="bthm" class="bi"><svg id="isun" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="3.5"></circle><path d="M9 1v2m0 12v2M1 9h2m12 0h2M3.9 3.9l1.4 1.4m7.4 7.4l1.4 1.4M14.1 3.9l-1.4 1.4M5.3 12.7l-1.4 1.4"></path></svg><svg id="imn" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" style="display:none"><path d="M15.1 10.4A7 7 0 017.6 2.9 7 7 0 1015.1 10.4z"></path></svg></button><button id="bset" class="bi"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="2.5"></circle><path d="M9 1v2m0 12v2M1 9h2m12 0h2"></path></svg></button></div></header>
 <div class="cnt" id="cntA">
-<!-- Chat -->
 <div id="cp" class="chat"><div id="msgs" class="msgs"></div><div class="cin">
-<div id="typ" class="typ hid"><div class="typd"><span></span><span></span><span></span></div><span data-t="thk">Thinking...</span></div>
+<div id="typ" class="typ hid"><div class="typd"><span></span><span></span><span></span></div><span id="typlbl" data-t="thk">Thinking...</span><span id="typmdl" class="typmdl"></span></div>
 <div id="apn" class="apn hid"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"></path></svg><div><strong data-t="an">API key needed.</strong> <button id="bapn" data-t="set">Settings</button></div></div>
 <div id="qact" class="qact hid"><button id="bproc" class="bproc" data-t="proc">🚀 Process all → PRD</button><button id="bagent" class="bagent hid" data-t="genAgent">🤖 Generate Agent Files</button></div>
 <div class="irow"><textarea id="ci" rows="1" data-t-placeholder="cp"></textarea><button id="bsnd" class="bsnd" disabled=""><svg width="16" height="16" viewBox="0 0 18 18" fill="currentColor"><path d="M2 16l14-7L2 2v5.5l8 1.5-8 1.5z"></path></svg></button><button id="bstp" class="bstp hid"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="3" y="3" width="10" height="10" rx="2"></rect></svg></button></div>
 <div class="ihnt" data-t="sh">Ctrl+Enter send · Ctrl+S save</div>
 </div></div>
 <div id="rsh" class="rsh"></div>
-<!-- RIGHT PANEL: unified docs viewer -->
 <div id="rp" class="rpanel">
 <div class="rp-top"><div class="rp-top-l">
 <div class="ftabs" id="ftabs">
@@ -257,66 +262,118 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 <div id="sfb" class="sfb hid"><div class="sfb-h"><span id="sft" class="sfbt"></span><button id="bsfx" class="bic">✕</button></div><div class="sfb-r"><textarea id="sfi" rows="2" data-t-placeholder="fp"></textarea><button id="bsff" class="bps" data-t="sf">Send</button></div></div>
 </div>
 </div></div>
-<div id="smod" class="modal hid"><div class="mbk" id="smbk"></div><div class="mc"><div class="mh"><h2 data-t="set">Settings</h2><button id="bsmx" class="bi"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l10 10M14 4L4 14"></path></svg></button></div><div class="mb"><div class="fg"><label data-t="akl">API Key</label><input type="password" id="sak" data-t-placeholder="akp"><div class="hn"><a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--ac)" data-t="gk">Get Key →</a></div></div><div class="fg"><label data-t="ml">Model</label><select id="smd"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-2.5-pro">Gemini 2.5 Pro</option><option value="gemini-2.0-flash">Gemini 2.0 Flash</option></select></div><div class="fg"><label data-t="mtl">Max Tokens</label><input type="number" id="smt" value="75000"></div><div class="fg"><label>Temperature</label><div class="rr"><input type="range" id="stm" min="0" max="1" step=".05" value=".6"><span id="stmv" class="rv">0.6</span></div></div><hr class="fdv"><div class="fg"><label data-t="spl">System Prompt</label><textarea id="ssp" rows="4"></textarea><div class="hn" data-t="sph">Leave empty for default.</div></div></div><div class="mf"><button id="brst" class="bsc" data-t="rst">Reset</button><button id="bssv" class="bp" data-t="sav">Save</button></div></div></div>
+<!-- Settings Modal -->
+<div id="smod" class="modal hid"><div class="mbk" id="smbk"></div><div class="mc"><div class="mh"><h2 data-t="set">Settings</h2><button id="bsmx" class="bi"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l10 10M14 4L4 14"></path></svg></button></div><div class="mb">
+<div class="fg"><label data-t="akl">API Key</label><input type="password" id="sak" data-t-placeholder="akp"><div class="hn"><a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--ac)" data-t="gk">Get Key →</a></div></div>
+<div class="fg"><label data-t="mrl">Model Routing</label>
+<div class="minfo">
+  <div class="minfo-r"><span class="minfo-b ch">💬 Chat</span> <code>gemma-4-31b-it</code></div>
+  <div class="minfo-r"><span class="minfo-b gn">🧠 Create</span> <code>gemini-3.1-flash-lite-preview</code></div>
+  <div class="minfo-fb">↳ Fallback: <code>gemini-2.5-flash</code> → <code>gemma-4-31b-it</code></div>
+</div>
+<div class="hn" data-t="mrh">Auto-routed. Chat uses fast model, generation uses smart model with fallbacks.</div>
+</div>
+<div class="fg"><label data-t="mtl">Max Tokens (Generate)</label><input type="number" id="smt" value="65536"></div>
+<div class="fg"><label>Temperature</label><div class="rr"><input type="range" id="stm" min="0" max="1" step=".05" value=".6"><span id="stmv" class="rv">0.6</span></div></div>
+<hr class="fdv">
+<div class="fg"><label data-t="spl">System Prompt Override</label><textarea id="ssp" rows="4"></textarea><div class="hn" data-t="sph">Leave empty for default optimized prompts.</div></div>
+</div><div class="mf"><button id="brst" class="bsc" data-t="rst">Reset</button><button id="bssv" class="bp" data-t="sav">Save</button></div></div></div>
 <div id="tc" class="tc"></div>
 </div>
+
 <script>
-/* IndexedDB */
-let _db=null;const IDB={open(){return new Promise((ok,no)=>{const r=indexedDB.open('prdgen',1);r.onupgradeneeded=e=>e.target.result.createObjectStore('d');r.onsuccess=e=>{_db=e.target.result;ok()};r.onerror=no})},get(k){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const r=_db.transaction('d').objectStore('d').get(k);r.onsuccess=()=>ok(r.result);r.onerror=no})},put(k,v){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const tx=_db.transaction('d','readwrite');tx.objectStore('d').put(v,k);tx.oncomplete=ok;tx.onerror=no})},clear(){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const tx=_db.transaction('d','readwrite');tx.objectStore('d').clear();tx.oncomplete=ok;tx.onerror=no})}};
+/* ═══════════════════════════════════════════════════════════════
+   MODEL ROUTING & CONSTANTS
+   ═══════════════════════════════════════════════════════════════ */
+const CHAT_MODELS   = ['gemma-4-31b-it'];
+const GEN_MODELS    = ['gemini-3.1-flash-lite-preview','gemini-2.5-flash','gemma-4-31b-it'];
+const TITLE_MODELS  = ['gemma-4-31b-it','gemini-2.5-flash'];
+const CHAT_CTX      = 12;   // context window: last 12 msgs for chat (saves tokens)
+const CHAT_MAX_TOK  = 4096; // cap chat output (short answers)
+const GEN_MAX_TOK_D = 65536;// default gen output
+
+/* ═══════════════════════════════════════════════════════════════
+   DUAL SYSTEM PROMPTS — optimized per purpose
+   Chat: ~100 tokens  |  Generate: ~300 tokens
+   ═══════════════════════════════════════════════════════════════ */
+const SYS_CHAT=`You are a senior PM AI. Interview user about their product idea.
+Ask 3-5 questions per round. ALWAYS give a recommendation with each question.
+Language: Match user's. Indonesian=casual bahasa.
+Voice: Direct. Concrete. Opinionated. Keep answers focused.`;
+
+const SYS_GEN=`You are a senior PM AI. Generate product documents from conversation.
+## Language: Match user's. Indonesian=casual.
+## PRD Generation
+FORMATTING RULES:
+- Functional Requirements: BULLET LISTS, NOT tables. Format: **FR-001 (P0)** Feature — Description. Acceptance: criteria.
+- NEVER tables >4 columns. Use bullet lists for detailed content.
+- Tables ONLY for compact data (metrics, comparisons).
+Sections: 1.Overview 2.Goals&Metrics 3.Personas 4.Stories&Flows 5.Functional Req(BULLET LIST) 6.Non-Functional 7.Design Direction(hex,fonts,components) 8.Technical 9.Out of Scope 10.Open Questions
+## Agent Generation (when asked)
+Generate 3 files separated by --- on its own line:
+# system-prompt.md (Agent persona, rules, constraints specific to product)
+# workflow.md (Step-by-step, decision trees, error handling)
+# skill.md (Domain knowledge, tools, integrations)
+Voice: Direct. Concrete. Opinionated.`;
+
+/* ═══════════════════════════════════════════════════════════════
+   TOKEN ESTIMATION
+   ~4 chars per token (English avg). Tracks per-session.
+   ═══════════════════════════════════════════════════════════════ */
+function estTok(txt){return Math.ceil((txt||'').length/4)}
+function addTok(sess,inp,out){
+  if(!sess)return;
+  if(!sess.tokens)sess.tokens={in:0,out:0};
+  sess.tokens.in+=inp;sess.tokens.out+=out;
+  updTokUI()
+}
+function updTokUI(){
+  const s=cur();const el=$('#tkn');if(!el)return;
+  if(!s||!s.tokens){el.textContent='⚡ 0 tok';el.title='No tokens used yet';return}
+  const tot=s.tokens.in+s.tokens.out;
+  const fmt=tot>1000?`${(tot/1000).toFixed(1)}k`:String(tot);
+  el.textContent=`⚡ ~${fmt} tok`;
+  el.title=`Est. tokens this session:\n  Input: ~${s.tokens.in.toLocaleString()}\n  Output: ~${s.tokens.out.toLocaleString()}\n  Total: ~${tot.toLocaleString()}`
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   IndexedDB
+   ═══════════════════════════════════════════════════════════════ */
+let _db=null;
+const IDB={open(){return new Promise((ok,no)=>{const r=indexedDB.open('prdgen',1);r.onupgradeneeded=e=>e.target.result.createObjectStore('d');r.onsuccess=e=>{_db=e.target.result;ok()};r.onerror=no})},get(k){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const r=_db.transaction('d').objectStore('d').get(k);r.onsuccess=()=>ok(r.result);r.onerror=no})},put(k,v){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const tx=_db.transaction('d','readwrite');tx.objectStore('d').put(v,k);tx.oncomplete=ok;tx.onerror=no})},clear(){if(!_db)return Promise.resolve();return new Promise((ok,no)=>{const tx=_db.transaction('d','readwrite');tx.objectStore('d').clear();tx.oncomplete=ok;tx.onerror=no})}};
 let _st;function save(){clearTimeout(_st);_st=setTimeout(async()=>{try{await IDB.put('S',S.sessions);await IDB.put('A',S.aid)}catch(e){}},1200)}
 function svL(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
 function ldL(k,d){try{const r=localStorage.getItem(k);return r?JSON.parse(r):d}catch(e){return d}}
 
-/* Translations */
-const LL={en:{ib:'AI PRD + Agent',it:'Build Better Products',is:"AI builds PRD then generates Agent files.",step:'Step',s1t:'Describe',s1d:'Your idea',s2t:'Interview',s2d:'AI asks+recs',s3t:'PRD',s3d:'Full doc',s4t:'Agent',s4d:'3 files',s5t:'Export',s5d:'Ship it',akt:'API Key',akd:'Gemini AI. Free — 30s.',gk:'Get Key →',akl:'API Key',akp:'Paste key...',ml:'Model',akh:'🔒 Browser only.',go:"Go!",sk:'Later',ses:'Sessions',set:'Settings',cp:'What are you building?',sh:'Ctrl+Enter send · Ctrl+S save',thk:'Thinking...',an:'API key needed.',co:'Copy',fo:'Feedback on',fp:'What to change?',sf:'Send',mtl:'Max Tokens',spl:'System Prompt',sph:'Leave empty for default.',rst:'Reset',sav:'Save',sp:'💾 Save',lp:'📂 Load',rt:'🔄 Tutorial',psv:'Saved ✓',pld:'Loaded ✓',ivf:'Invalid file',regen:'Redo',proc:'🚀 Process all → PRD',genAgent:'🤖 Generate Agent Files',
-procMsg:"Proceed with all your recommendations. Generate the complete PRD now.\n\nIMPORTANT formatting rules:\n- For Functional Requirements, use a BULLET LIST format, NOT a table. Each item: **FR-001 (P0)** Feature name — Description. Acceptance: criteria.\n- Keep all sections detailed but use bullet lists instead of wide tables.\n- Use tables ONLY for small 2-3 column data. Never make tables wider than 4 short columns.",
-genAgentMsg:"Based on the PRD we just created, generate 3 separate AI Agent files. Output them clearly separated:\n\n# system-prompt.md\n[Full agent persona, rules, constraints, behavior — specific to this product]\n\n---\n\n# workflow.md\n[Step-by-step workflow, decision trees, error handling, edge cases]\n\n---\n\n# skill.md\n[Domain skills, tools, integrations, knowledge base, capabilities]\n\nAfter all 3 files, add a final section:\n\n---\n\n# 📖 How to Use This PRD + Agent\n\nExplain clearly:\n1. How to use the PRD (who gets it, how to share, how to iterate)\n2. How to deploy each agent file:\n   - system-prompt.md → paste as system instruction in ChatGPT/Claude/Cursor\n   - workflow.md → reference for developers building AI features\n   - skill.md → knowledge base / RAG document\n3. Step-by-step quick start (copy-paste ready)\n4. Tips for maintaining and updating both PRD and Agent files together\n\nMake the guide practical and actionable, not generic.",
+/* ═══════════════════════════════════════════════════════════════
+   TRANSLATIONS
+   ═══════════════════════════════════════════════════════════════ */
+const LL={en:{ib:'AI PRD + Agent',it:'Build Better Products',is:"AI builds PRD then generates Agent files.",step:'Step',s1t:'Describe',s1d:'Your idea',s2t:'Interview',s2d:'AI asks+recs',s3t:'PRD',s3d:'Full doc',s4t:'Agent',s4d:'3 files',s5t:'Export',s5d:'Ship it',akt:'API Key',akd:'Gemini AI. Free — 30s.',gk:'Get Key →',akl:'API Key',akp:'Paste key...',ml:'Model',mrl:'Model Routing',mrh:'Auto-routed. Chat uses fast model, generation uses smart model with fallbacks.',akh:'🔒 Browser only.',go:"Go!",sk:'Later',ses:'Sessions',set:'Settings',cp:'What are you building?',sh:'Ctrl+Enter send · Ctrl+S save',thk:'Thinking...',an:'API key needed.',co:'Copy',fo:'Feedback on',fp:'What to change?',sf:'Send',mtl:'Max Tokens (Generate)',spl:'System Prompt Override',sph:'Leave empty for default optimized prompts.',rst:'Reset',sav:'Save',sp:'💾 Save',lp:'📂 Load',rt:'🔄 Tutorial',psv:'Saved ✓',pld:'Loaded ✓',ivf:'Invalid file',regen:'Redo',proc:'🚀 Process all → PRD',genAgent:'🤖 Generate Agent Files',
+procMsg:"Use all recommendations. Generate the complete PRD now following your formatting rules.",
+genAgentMsg:"Based on our PRD, generate 3 agent files clearly separated:\n# system-prompt.md (persona, rules, constraints for this product)\n# workflow.md (step-by-step, decision trees, error handling)\n# skill.md (domain knowledge, tools, integrations)\nThen add:\n# 📖 How to Use This PRD + Agent\nInclude deployment steps for each file, quick start, and maintenance tips. Be specific and actionable.",
 pet:'No PRD yet',ped:'Describe your product in chat first.',agentEmpty:'No agent files yet',agentEmptyD:'Generate PRD first, then click "Generate Agent Files".',
 t1i:'💬',t1t:'Type Your Idea',t1x:'Describe what to build. AI interviews + recommends.',t2i:'🚀',t2t:'Send or Process All',t2x:'Answer or click Process All to skip to PRD.',t3i:'📄',t3t:'Docs Panel',t3x:'PRD + Agent files in tabs. Click to switch, review, export each.',t4i:'💾',t4t:'Save & Export',t4x:'Ctrl+S saves project. Export each file as .md or copy.',
-tb:'←',tn:'→',tsk:'Skip',td:'Go! 🚀',tst:'Step',ok:'Copied ✓',dl:'Downloaded ✓',sv:'Saved ✓',ne:'Nothing to export',pr:'Reset ✓',tod:'Today',yes:'Yesterday',dc:'Delete?',er:'Error',gs:'Stopped',
+tb:'←',tn:'→',tsk:'Skip',td:'Go! 🚀',tst:'Step',ok:'Copied ✓',dl:'Downloaded ✓',sv:'Saved ✓',ne:'Nothing to export',pr:'Reset ✓',tod:'Today',yes:'Yesterday',dc:'Delete?',er:'Error',gs:'Stopped',fb_m:'Falling back...',
 c1:'AI is interviewing you. Answer or hit Process All. 👇',c2:'PRD ready! 🎉 Click "Generate Agent Files" for the next step.',c3:'Agent files ready! 🤖 Check the tabs in the docs panel.',
 w:"Hey! 👋 I'm your PRD + Agent generator.\n\nDescribe what to build. I ask 3-5 questions per round with recommendations.\n\nAfter the PRD, I generate AI Agent files (system-prompt, workflow, skill).\n\nWhat are we building?"},
-id:{ib:'AI PRD + Agent',it:'Bikin Produk Lebih Oke',is:'AI bikin PRD terus generate file Agent.',step:'Langkah',s1t:'Ceritain',s1d:'Ide kamu',s2t:'Interview',s2d:'AI nanya+rekom',s3t:'PRD',s3d:'Dokumen lengkap',s4t:'Agent',s4d:'3 file',s5t:'Export',s5d:'Gas',akt:'API Key',akd:'Pake Gemini. Gratis — 30dtk.',gk:'Ambil Key →',akl:'API Key',akp:'Paste key...',ml:'Model',akh:'🔒 Di browser aja.',go:'Gas! 🚀',sk:'Nanti',ses:'Sesi',set:'Pengaturan',cp:'Mau bikin apa?',sh:'Ctrl+Enter kirim · Ctrl+S simpan',thk:'Mikir...',an:'Butuh API key.',co:'Salin',fo:'Feedback untuk',fp:'Apa yang diubah?',sf:'Kirim',mtl:'Max Token',spl:'System Prompt',sph:'Kosongin buat default.',rst:'Reset',sav:'Simpan',sp:'💾 Simpan',lp:'📂 Buka',rt:'🔄 Tutorial',psv:'Tersimpan ✓',pld:'Dimuat ✓',ivf:'File gak valid',regen:'Ulang',proc:'🚀 Proses semua → PRD',genAgent:'🤖 Generate File Agent',
-procMsg:"Lanjut pake semua rekomendasi. Bikin PRD lengkap sekarang.\n\nATURAN FORMAT PENTING:\n- Untuk Functional Requirements, pake format BULLET LIST, BUKAN tabel. Setiap item: **FR-001 (P0)** Nama fitur — Deskripsi. Acceptance: kriteria.\n- Semua bagian detail tapi pake bullet list, bukan tabel lebar.\n- Pake tabel HANYA untuk data 2-3 kolom pendek.",
-genAgentMsg:"Berdasarkan PRD yang udah kita buat, generate 3 file AI Agent terpisah:\n\n# system-prompt.md\n[Persona agent lengkap, aturan, batasan, perilaku — spesifik produk ini]\n\n---\n\n# workflow.md\n[Workflow step-by-step, decision tree, error handling, edge cases]\n\n---\n\n# skill.md\n[Skill domain, tools, integrasi, knowledge base, kemampuan]\n\nSetelah 3 file, tambahin bagian terakhir:\n\n---\n\n# 📖 Cara Pake PRD + Agent Ini\n\nJelasin dengan jelas:\n1. Cara pake PRD (siapa yang dapet, cara share, cara revisi)\n2. Cara deploy setiap file agent:\n   - system-prompt.md → paste sebagai system instruction di ChatGPT/Claude/Cursor\n   - workflow.md → referensi developer yang bikin fitur AI\n   - skill.md → knowledge base / dokumen RAG\n3. Quick start step-by-step (siap copy-paste)\n4. Tips maintain dan update PRD + Agent bareng-bareng\n\nBikin panduan yang praktis dan actionable, bukan generik.",
+id:{ib:'AI PRD + Agent',it:'Bikin Produk Lebih Oke',is:'AI bikin PRD terus generate file Agent.',step:'Langkah',s1t:'Ceritain',s1d:'Ide kamu',s2t:'Interview',s2d:'AI nanya+rekom',s3t:'PRD',s3d:'Dokumen lengkap',s4t:'Agent',s4d:'3 file',s5t:'Export',s5d:'Gas',akt:'API Key',akd:'Pake Gemini. Gratis — 30dtk.',gk:'Ambil Key →',akl:'API Key',akp:'Paste key...',ml:'Model',mrl:'Routing Model',mrh:'Auto-routing. Chat pake model cepat, generate pake model pintar + fallback.',akh:'🔒 Di browser aja.',go:'Gas! 🚀',sk:'Nanti',ses:'Sesi',set:'Pengaturan',cp:'Mau bikin apa?',sh:'Ctrl+Enter kirim · Ctrl+S simpan',thk:'Mikir...',an:'Butuh API key.',co:'Salin',fo:'Feedback untuk',fp:'Apa yang diubah?',sf:'Kirim',mtl:'Max Token (Generate)',spl:'Override System Prompt',sph:'Kosongin buat default yang udah dioptimasi.',rst:'Reset',sav:'Simpan',sp:'💾 Simpan',lp:'📂 Buka',rt:'🔄 Tutorial',psv:'Tersimpan ✓',pld:'Dimuat ✓',ivf:'File gak valid',regen:'Ulang',proc:'🚀 Proses semua → PRD',genAgent:'🤖 Generate File Agent',
+procMsg:"Pake semua rekomendasi. Bikin PRD lengkap sekarang sesuai format yang ditentuin.",
+genAgentMsg:"Berdasarkan PRD, generate 3 file agent terpisah:\n# system-prompt.md (persona, aturan, batasan produk ini)\n# workflow.md (step-by-step, decision tree, error handling)\n# skill.md (skill domain, tools, integrasi)\nTerus tambahin:\n# 📖 Cara Pake PRD + Agent Ini\nSertakan cara deploy tiap file, quick start, dan tips maintenance. Bikin spesifik dan actionable.",
 pet:'Belum ada PRD',ped:'Ceritain ide di chat dulu.',agentEmpty:'Belum ada file agent',agentEmptyD:'Bikin PRD dulu, terus klik "Generate File Agent".',
 t1i:'💬',t1t:'Ketik Ide',t1x:'Ceritain mau bikin apa. AI nanya + rekomendasiin.',t2i:'🚀',t2t:'Kirim atau Proses Semua',t2x:'Jawab atau klik Proses Semua buat skip ke PRD.',t3i:'📄',t3t:'Panel Dokumen',t3x:'PRD + file Agent di tab. Klik buat ganti, review, export masing-masing.',t4i:'💾',t4t:'Simpan & Export',t4x:'Ctrl+S simpan proyek. Export tiap file jadi .md atau copy.',
-tb:'←',tn:'→',tsk:'Skip',td:'Gas! 🚀',tst:'Langkah',ok:'Ke-copy ✓',dl:'Ke-download ✓',sv:'Tersimpan ✓',ne:'Belum ada',pr:'Reset ✓',tod:'Hari ini',yes:'Kemarin',dc:'Hapus?',er:'Error',gs:'Dihentiin',
+tb:'←',tn:'→',tsk:'Skip',td:'Gas! 🚀',tst:'Langkah',ok:'Ke-copy ✓',dl:'Ke-download ✓',sv:'Tersimpan ✓',ne:'Belum ada',pr:'Reset ✓',tod:'Hari ini',yes:'Kemarin',dc:'Hapus?',er:'Error',gs:'Dihentiin',fb_m:'Coba model lain...',
 c1:'AI lagi wawancara. Jawab atau klik Proses Semua. 👇',c2:'PRD jadi! 🎉 Klik "Generate File Agent" buat langkah selanjutnya.',c3:'File agent jadi! 🤖 Cek tab di panel dokumen.',
 w:"Halo! 👋 Aku PRD + Agent generator kamu.\n\nCeritain mau bikin apa. Aku nanya 3-5 per ronde + kasih rekomendasi.\n\nSetelah PRD jadi, aku bikinin file AI Agent (system-prompt, workflow, skill).\n\nMau bikin apa?"}};
 
-/* System prompt — FIXED: tells AI to avoid wide tables */
-const SYS=`You are a senior PM AI. Interview user, generate PRD, then generate Agent files.
-## Language: Match user's. Indonesian=casual.
-## Recommendations: ALWAYS give recommendation with each question.
-## Phase 1: Interview (3-5 Qs/round WITH recommendations)
-## Phase 2: PRD
-CRITICAL FORMATTING RULES:
-- For Functional Requirements: use BULLET LISTS, NOT tables. Format: **FR-001 (P0)** Feature — Description. Acceptance: criteria.
-- NEVER create tables with more than 4 columns or columns wider than 20 characters.
-- Use tables ONLY for compact data (metrics, simple comparisons). Use bullet lists for everything else.
-- Keep content within reasonable width. No horizontal overflow.
-
-Sections: 1.Overview 2.Goals&Metrics 3.Personas 4.Stories&Flows 5.Functional Requirements(BULLET LIST format) 6.Non-Functional 7.Design Direction(hex,fonts,components) 8.Technical 9.Out of Scope 10.Open Questions
-
-## Phase 3: Agent Generation (when asked)
-Generate 3 files clearly separated by --- on its own line:
-# system-prompt.md
-(Agent persona, rules, constraints specific to product)
-# workflow.md
-(Step-by-step procedures, decision trees, error handling)
-# skill.md
-(Domain knowledge, tools, integrations)
-## Voice: Direct. Concrete. Opinionated.`;
-
-/* State */
+/* ═══════════════════════════════════════════════════════════════
+   STATE
+   ═══════════════════════════════════════════════════════════════ */
 let lang='en',tutS=0,tips={},showAll=false,activeFile='prd';
-let S={sessions:[],aid:null,stg:{apiKey:'',model:'gemini-2.5-flash',maxTokens:75000,temperature:.6,sp:''},gen:false,ctrl:null,mtab:'chat',sbOpen:false};
+let S={sessions:[],aid:null,stg:{apiKey:'',maxTokens:65536,temperature:.6,sp:''},gen:false,ctrl:null,mtab:'chat',sbOpen:false,_lastModel:''};
 const MP=30,$=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 function t(k){return LL[lang]?.[k]||LL.en?.[k]||k}
 function uid(){return Math.random().toString(36).slice(2,10)}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
-function debounce(f,ms){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),ms)}}
 function toast(m,tp='i'){const e=document.createElement('div');e.className=`tst tst-${tp}`;e.textContent=m;$('#tc').appendChild(e);setTimeout(()=>{e.classList.add('out');setTimeout(()=>e.remove(),200)},2500)}
 function fmtT(ts){return new Date(ts).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}
 function fmtD(ts){const d=new Date(ts),n=new Date();if(d.toDateString()===n.toDateString())return t('tod');const y=new Date(n);y.setDate(n.getDate()-1);if(d.toDateString()===y.toDateString())return t('yes');return d.toLocaleDateString([],{month:'short',day:'numeric'})}
@@ -324,13 +381,15 @@ const _mc=new Map();function md(s){if(!s)return'';let c=_mc.get(s);if(c)return c
 function initMd(){if(typeof marked!=='undefined')marked.setOptions({gfm:true,breaks:true,headerIds:false,mangle:false})}
 function setL(l,intro){lang=l;svL('lang',l);$$('.ilb,.hlgb').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));$$('[data-t]').forEach(e=>{if(document.contains(e))e.textContent=t(e.dataset.t)});$$('[data-t-placeholder]').forEach(e=>{if(document.contains(e))e.placeholder=t(e.dataset.tPlaceholder)});$$('.istep-n').forEach((e,i)=>e.textContent=t('step')+' '+(i+1));const s=cur();if(s&&s.msgs.length===1&&s.msgs[0].id[0]==='w'){s.msgs[0].content=t('w');if(!intro)rMsgs()}if(!intro){rDoc();updBtns()}}
 
-/* Sessions */
+/* ═══════════════════════════════════════════════════════════════
+   SESSIONS
+   ═══════════════════════════════════════════════════════════════ */
 function cur(){return S.sessions.find(s=>s.id===S.aid)||null}
-function mkS(nm){const s={id:uid(),name:nm||t('ses')+' '+(S.sessions.length+1),ts:Date.now(),ut:Date.now(),msgs:[{id:'w'+Date.now(),role:'assistant',content:t('w'),ts:Date.now()}],prd:null,agent:{system:'',workflow:'',skill:'',guide:''},fb:{}};S.sessions.unshift(s);S.aid=s.id;save();return s}
+function mkS(nm){const s={id:uid(),name:nm||t('ses')+' '+(S.sessions.length+1),ts:Date.now(),ut:Date.now(),msgs:[{id:'w'+Date.now(),role:'assistant',content:t('w'),ts:Date.now()}],prd:null,agent:{system:'',workflow:'',skill:'',guide:''},fb:{},tokens:{in:0,out:0}};S.sessions.unshift(s);S.aid=s.id;save();return s}
 function delS(id){S.sessions=S.sessions.filter(s=>s.id!==id);if(S.aid===id){S.aid=S.sessions[0]?.id||null;if(!S.aid)mkS()}save();rSL();rAct()}
 function swS(id){if(S.gen)return;S.aid=id;showAll=false;activeFile='prd';save();rAct();rSL()}
-function saveP(){const s=cur();if(!s)return;const d=JSON.stringify({v:3,s:{name:s.name,ts:s.ts,ut:s.ut,msgs:s.msgs,prd:s.prd,agent:s.agent,fb:s.fb}},null,2);const b=new Blob([d],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=(s.name||'prd').replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.prd.json';a.click();URL.revokeObjectURL(u);toast(t('psv'),'s')}
-function loadP(){const i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(!d.s?.msgs)throw 0;const s={id:uid(),name:d.s.name||f.name,ts:d.s.ts||Date.now(),ut:Date.now(),msgs:d.s.msgs,prd:d.s.prd||null,agent:d.s.agent||{system:'',workflow:'',skill:''},fb:d.s.fb||{}};if(!s.prd)detectPrd(s);S.sessions.unshift(s);S.aid=s.id;showAll=false;activeFile='prd';save();rSL();rAct();closeSB();toast(t('pld'),'s')}catch(e){toast(t('ivf'),'e')}};r.readAsText(f)};i.click()}
+function saveP(){const s=cur();if(!s)return;const d=JSON.stringify({v:4,s:{name:s.name,ts:s.ts,ut:s.ut,msgs:s.msgs,prd:s.prd,agent:s.agent,fb:s.fb,tokens:s.tokens}},null,2);const b=new Blob([d],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=(s.name||'prd').replace(/[^a-z0-9]/gi,'-').toLowerCase()+'.prd.json';a.click();URL.revokeObjectURL(u);toast(t('psv'),'s')}
+function loadP(){const i=document.createElement('input');i.type='file';i.accept='.json';i.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(!d.s?.msgs)throw 0;const s={id:uid(),name:d.s.name||f.name,ts:d.s.ts||Date.now(),ut:Date.now(),msgs:d.s.msgs,prd:d.s.prd||null,agent:d.s.agent||{system:'',workflow:'',skill:'',guide:''},fb:d.s.fb||{},tokens:d.s.tokens||{in:0,out:0}};if(!s.prd)detectPrd(s);S.sessions.unshift(s);S.aid=s.id;showAll=false;activeFile='prd';save();rSL();rAct();closeSB();toast(t('pld'),'s')}catch(e){toast(t('ivf'),'e')}};r.readAsText(f)};i.click()}
 
 /* PRD detection */
 const PRE=[/^#{1,2}\s*(?:\d+\.\s*)?Overview/mi,/^#{1,2}\s*(?:\d+\.\s*)?Goals/mi,/^#{1,2}\s*(?:\d+\.\s*)?Persona/mi,/^#{1,2}\s*(?:\d+\.\s*)?Stor/mi,/^#{1,2}\s*(?:\d+\.\s*)?.*Req/mi,/^#{1,2}\s*(?:\d+\.\s*)?Design/mi,/^#{1,2}\s*(?:\d+\.\s*)?Technical/mi,/^#{1,2}\s*(?:\d+\.\s*)?Scope/mi];
@@ -342,12 +401,166 @@ function detectPrd(s){for(const m of s.msgs)if(m.role==='assistant'&&isP(m.conte
 function isAgent(c){return/^#\s*system-prompt/mi.test(c)&&/^#\s*workflow/mi.test(c)}
 function parseAgent(c){const a={system:'',workflow:'',skill:'',guide:''};let cur='';for(const line of c.split('\n')){if(/^#\s*system-prompt/i.test(line)){cur='system';a[cur]+=line+'\n'}else if(/^#\s*workflow/i.test(line)){cur='workflow';a[cur]+=line+'\n'}else if(/^#\s*skill/i.test(line)){cur='skill';a[cur]+=line+'\n'}else if(/^#\s*.*(?:How to Use|Cara Pake)/i.test(line)){cur='guide';a[cur]+=line+'\n'}else if(cur){if(line.trim()==='---'&&!a[cur].trim())continue;a[cur]+=line+'\n'}}for(const k in a)a[k]=a[k].trim();return a}
 
-/* Gemini */
-function getSP(){return S.stg.sp?.trim()||SYS}
-async function* streamG(messages){const s=S.stg;if(!s.apiKey)throw new Error('No API key.');const url=`https://generativelanguage.googleapis.com/v1beta/models/${s.model||'gemini-2.5-flash'}:streamGenerateContent?alt=sse&key=${s.apiKey}`;const contents=[];for(const m of messages){if(m.role==='user')contents.push({role:'user',parts:[{text:m.content}]});else if(m.role==='assistant')contents.push({role:'model',parts:[{text:m.content}]})}const ctrl=new AbortController();S.ctrl=ctrl;const tid=setTimeout(()=>ctrl.abort(),120000);try{const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents,systemInstruction:{parts:[{text:getSP()}]},generationConfig:{temperature:parseFloat(s.temperature)||.6,maxOutputTokens:parseInt(s.maxTokens)||75000}}),signal:ctrl.signal});clearTimeout(tid);if(!res.ok){let m=`API ${res.status}`;try{const e=await res.json();m=e.error?.message||m}catch(e){}throw new Error(m)}const reader=res.body.getReader(),dec=new TextDecoder();let buf='';while(true){const{done,value}=await reader.read();if(done)break;buf+=dec.decode(value,{stream:true});const lines=buf.split('\n');buf=lines.pop()||'';for(const line of lines){const tr=line.trim();if(!tr||!tr.startsWith('data: '))continue;try{const d=JSON.parse(tr.slice(6));const txt=d.candidates?.[0]?.content?.parts?.[0]?.text;if(txt)yield txt}catch(e){}}}}catch(e){clearTimeout(tid);throw e}}
-async function autoTitle(msg){try{const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${S.stg.model||'gemini-2.5-flash'}:generateContent?key=${S.stg.apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{role:'user',parts:[{text:`3-5 word title: "${msg.slice(0,200)}". ONLY title.`}]}],generationConfig:{maxOutputTokens:20,temperature:.3}})});if(res.ok){const d=await res.json();const title=d.candidates?.[0]?.content?.parts?.[0]?.text?.trim();if(title&&title.length<60){const s=cur();if(s){s.name=title;$('#sn').textContent=title;rSL();save()}}}}catch(e){}}
+/* ═══════════════════════════════════════════════════════════════
+   GEMINI API — with model routing & fallback
+   ═══════════════════════════════════════════════════════════════
+   purpose: 'chat' | 'generate'
+   Chat    → gemma-4-31b-it (fast, conversational)
+   Generate → gemini-3.1-flash-lite-preview → gemini-2.5-flash → gemma-4-31b-it
+   ═══════════════════════════════════════════════════════════════ */
+function getSP(purpose){
+  if(S.stg.sp?.trim())return S.stg.sp; // user override
+  return purpose==='generate'?SYS_GEN:SYS_CHAT;
+}
+function updTypModel(model){
+  const el=$('#typmdl');
+  if(el)el.textContent=model;
+}
 
-/* Button visibility */
+async function* streamG(messages,purpose){
+  const s=S.stg;
+  if(!s.apiKey)throw new Error('No API key.');
+
+  const chain=purpose==='generate'?[...GEN_MODELS]:[...CHAT_MODELS];
+  const sysPr=getSP(purpose);
+
+  /* Context optimization: chat only needs recent messages */
+  let ctx=messages;
+  if(purpose==='chat'&&ctx.length>CHAT_CTX){
+    ctx=ctx.slice(-CHAT_CTX);
+  }
+
+  const contents=[];
+  for(const m of ctx){
+    if(m.role==='user')contents.push({role:'user',parts:[{text:m.content}]});
+    else if(m.role==='assistant')contents.push({role:'model',parts:[{text:m.content}]});
+  }
+
+  /* Token-optimized output limits */
+  const maxTok=purpose==='chat'
+    ?Math.min(parseInt(s.maxTokens)||CHAT_MAX_TOK,CHAT_MAX_TOK)
+    :parseInt(s.maxTokens)||GEN_MAX_TOK_D;
+  const timeout=purpose==='chat'?60000:180000;
+
+  /* Estimate input tokens for tracking */
+  let inputTok=estTok(sysPr);
+  for(const c of contents)inputTok+=estTok(c.parts[0].text);
+
+  let lastErr;
+  let hasYielded=false;
+
+  for(let ci=0;ci<chain.length;ci++){
+    const model=chain[ci];
+    const ctrl=new AbortController();
+    S.ctrl=ctrl;
+    const tid=setTimeout(()=>ctrl.abort(),timeout);
+    hasYielded=false;
+
+    try{
+      updTypModel(model);
+      if(ci>0)toast(t('fb_m')+' '+model,'i');
+
+      const url=`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${s.apiKey}`;
+
+      const res=await fetch(url,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          contents,
+          systemInstruction:{parts:[{text:sysPr}]},
+          generationConfig:{
+            temperature:parseFloat(s.temperature)||.6,
+            maxOutputTokens:maxTok
+          }
+        }),
+        signal:ctrl.signal
+      });
+
+      clearTimeout(tid);
+
+      if(!res.ok){
+        let m=`API ${res.status}`;
+        try{const e=await res.json();m=e.error?.message||m}catch(e){}
+        throw new Error(m);
+      }
+
+      /* Stream response */
+      const reader=res.body.getReader(),dec=new TextDecoder();
+      let buf='',outputText='';
+
+      while(true){
+        const{done,value}=await reader.read();
+        if(done)break;
+        buf+=dec.decode(value,{stream:true});
+        const lines=buf.split('\n');
+        buf=lines.pop()||'';
+        for(const line of lines){
+          const tr=line.trim();
+          if(!tr||!tr.startsWith('data: '))continue;
+          try{
+            const d=JSON.parse(tr.slice(6));
+            const txt=d.candidates?.[0]?.content?.parts?.[0]?.text;
+            if(txt){hasYielded=true;outputText+=txt;yield txt}
+          }catch(e){}
+        }
+      }
+
+      /* Empty response = try next model */
+      if(!hasYielded){
+        throw new Error('Empty response from '+model);
+      }
+
+      /* Success — track tokens */
+      const sess=cur();
+      if(sess)addTok(sess,inputTok,estTok(outputText));
+      S._lastModel=model;
+      return;
+
+    }catch(e){
+      clearTimeout(tid);
+      lastErr=e;
+
+      /* Don't fallback on user abort */
+      if(e.name==='AbortError')throw e;
+      /* Don't fallback if already streaming (mid-stream failure) */
+      if(hasYielded)throw e;
+      /* Last model — give up */
+      if(ci===chain.length-1)throw e;
+
+      console.warn(`[Fallback] ${model} failed: ${e.message}, trying ${chain[ci+1]}...`);
+    }
+  }
+  throw lastErr;
+}
+
+/* Auto-title — uses fast chat model with fallback */
+async function autoTitle(msg){
+  for(const model of TITLE_MODELS){
+    try{
+      const res=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${S.stg.apiKey}`,{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          contents:[{role:'user',parts:[{text:`3-5 word title: "${msg.slice(0,150)}". ONLY title, nothing else.`}]}],
+          generationConfig:{maxOutputTokens:20,temperature:.3}
+        })
+      });
+      if(res.ok){
+        const d=await res.json();
+        const title=d.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+        if(title&&title.length<60){
+          const s=cur();
+          if(s){s.name=title;$('#sn').textContent=title;rSL();save();
+            addTok(s,estTok(msg.slice(0,150))+10,estTok(title))}
+        }
+        return;
+      }
+    }catch(e){console.warn(`autoTitle ${model} fail:`,e.message)}
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON VISIBILITY
+   ═══════════════════════════════════════════════════════════════ */
 function updBtns(){const s=cur();if(!s){$('#qact').classList.add('hid');return}
   const ai=s.msgs.filter(m=>m.role==='assistant'&&m.id[0]!=='w');
   const hasPrd=!!s.prd;const hasAgent=s.agent&&(s.agent.system||s.agent.workflow);
@@ -356,24 +569,44 @@ function updBtns(){const s=cur();if(!s){$('#qact').classList.add('hid');return}
   $('#qact').classList.toggle('hid',!showP&&!showA);
   $('#bproc').classList.toggle('hid',!showP);
   $('#bagent').classList.toggle('hid',!showA);
-  /* Update agent tab states */
   $$('.ftab.agent-tab').forEach(b=>{b.classList.toggle('disabled',!hasAgent)})}
 
-/* Send message */
-async function sendMsg(regenId){
+/* ═══════════════════════════════════════════════════════════════
+   SEND MESSAGE — with purpose routing
+   ═══════════════════════════════════════════════════════════════ */
+async function sendMsg(regenId,purpose){
+  purpose=purpose||'chat';
   const isR=!!regenId;let txt;
   if(!isR){txt=$('#ci').value.trim();if(!txt||S.gen)return;$('#ci').value='';autoR()}
   const s=cur();if(!s)return;
   if(isR){const i=s.msgs.findIndex(m=>m.id===regenId);if(i<0)return;s.msgs=s.msgs.slice(0,i);rMsgs()}
   if(!isR){const isFirst=!s.msgs.some(m=>m.role==='user');s.msgs.push({id:uid(),role:'user',content:txt,ts:Date.now()});rMsg(s.msgs[s.msgs.length-1]);scrollB();if(isFirst&&S.stg.apiKey)autoTitle(txt)}
   S.gen=true;updI();updBtns();
-  const am={id:uid(),role:'assistant',content:'',ts:Date.now()};s.msgs.push(am);
+  const am={id:uid(),role:'assistant',content:'',ts:Date.now(),model:''};s.msgs.push(am);
   const el=rMsg(am),cel=el.querySelector('.msg-ct');
   $('#typ').classList.remove('hid');scrollB();
-  try{const toSend=s.msgs.filter(m=>m.id!==am.id&&m.id[0]!=='w');
+  try{
+    const toSend=s.msgs.filter(m=>m.id!==am.id&&m.id[0]!=='w');
     let lastR=0,raf=0;
-    for await(const chunk of streamG(toSend)){am.content+=chunk;const now=performance.now();if(now-lastR>=150){if(raf)cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{cel.innerHTML=md(am.content);$('#msgs').scrollTop=$('#msgs').scrollHeight;raf=0});lastR=now}}
+    for await(const chunk of streamG(toSend,purpose)){
+      am.content+=chunk;
+      const now=performance.now();
+      if(now-lastR>=150){
+        if(raf)cancelAnimationFrame(raf);
+        raf=requestAnimationFrame(()=>{cel.innerHTML=md(am.content);$('#msgs').scrollTop=$('#msgs').scrollHeight;raf=0});
+        lastR=now;
+      }
+    }
     if(raf)cancelAnimationFrame(raf);cel.innerHTML=md(am.content);scrollB();am.ts=Date.now();
+    am.model=S._lastModel||'';
+
+    /* Update model badge in message */
+    const tmEl=el.querySelector('.msg-tm');
+    if(tmEl&&am.model){
+      const mb=document.createElement('span');mb.className='msg-mdl';mb.textContent=am.model;
+      tmEl.insertBefore(mb,tmEl.firstChild.nextSibling);
+    }
+
     /* Detect PRD */
     if(!s.prd&&isP(am.content)){s.prd=exP(am.content);activeFile='prd';rDoc();updFileTabs();tipOnce('c2',t('c2'));
       const dt=$('.mtb[data-tab="docs"]');if(dt){dt.classList.add('pulse');setTimeout(()=>dt.classList.remove('pulse'),4000)}
@@ -384,33 +617,38 @@ async function sendMsg(regenId){
       if(innerWidth<=768)setMT('docs')}
     else if(s.msgs.filter(m=>m.role==='assistant'&&m.id[0]!=='w').length===1)tipOnce('c1',t('c1'));
   }catch(err){
-    if(err.name==='AbortError'){am.content+=(am.content?'\n\n':'')+'*['+t('gs')+']*';cel.innerHTML=md(am.content);const rb=document.createElement('button');rb.className='msg-retry';rb.textContent='↻ Retry';rb.onclick=()=>{el.remove();s.msgs=s.msgs.filter(m=>m.id!==am.id);sendMsg()};el.querySelector('.msg-bd').appendChild(rb)}
-    else{s.msgs=s.msgs.filter(m=>m.id!==am.id);el.remove();const em={id:uid(),role:'assistant',content:'',ts:Date.now()};s.msgs.push(em);const ee=rMsg(em,1);ee.querySelector('.msg-ct').textContent=t('er')+': '+err.message;ee.classList.add('msg-err');const rb=document.createElement('button');rb.className='msg-retry';rb.textContent='↻ Retry';rb.onclick=()=>{ee.remove();s.msgs.pop();sendMsg()};ee.querySelector('.msg-bd').appendChild(rb)}
+    if(err.name==='AbortError'){am.content+=(am.content?'\n\n':'')+'*['+t('gs')+']*';cel.innerHTML=md(am.content);const rb=document.createElement('button');rb.className='msg-retry';rb.textContent='↻ Retry';rb.onclick=()=>{el.remove();s.msgs=s.msgs.filter(m=>m.id!==am.id);sendMsg(null,purpose)};el.querySelector('.msg-bd').appendChild(rb)}
+    else{s.msgs=s.msgs.filter(m=>m.id!==am.id);el.remove();const em={id:uid(),role:'assistant',content:'',ts:Date.now()};s.msgs.push(em);const ee=rMsg(em,1);ee.querySelector('.msg-ct').textContent=t('er')+': '+err.message;ee.classList.add('msg-err');const rb=document.createElement('button');rb.className='msg-retry';rb.textContent='↻ Retry';rb.onclick=()=>{ee.remove();s.msgs.pop();sendMsg(null,purpose)};ee.querySelector('.msg-bd').appendChild(rb)}
   }finally{S.gen=false;S.ctrl=null;$('#typ').classList.add('hid');updI();updBtns();s.ut=Date.now();save();scrollB()}
 }
-function processAll(){if(S.gen)return;$('#ci').value=t('procMsg');autoR();sendMsg()}
-function genAgent(){if(S.gen)return;$('#ci').value=t('genAgentMsg');autoR();sendMsg()}
 
-/* Rendering */
+/* Process All → PRD (uses generate model chain) */
+function processAll(){if(S.gen)return;$('#ci').value=t('procMsg');autoR();sendMsg(null,'generate')}
+/* Generate Agent Files (uses generate model chain) */
+function genAgent(){if(S.gen)return;$('#ci').value=t('genAgentMsg');autoR();sendMsg(null,'generate')}
+
+/* ═══════════════════════════════════════════════════════════════
+   RENDERING
+   ═══════════════════════════════════════════════════════════════ */
 function rMsg(m,err){const w=document.createElement('div');w.className=`msg msg-${m.role[0]==='u'?'u':'a'}${err?' msg-err':''}`;const isU=m.role==='user',isW=m.id[0]==='w';
   const rg=(!isU&&!isW&&!err)?`<button class="msg-rg">↻</button>`:'';
-  w.innerHTML=`<div class="msg-av">${isU?'U':'AI'}</div><div class="msg-bd"><div class="msg-ct">${isU?esc(m.content).replace(/\n/g,'<br>'):md(m.content)}</div><div class="msg-tm">${fmtT(m.ts)} ${rg}</div></div>`;
+  const modelBadge=(!isU&&!isW&&!err&&m.model)?`<span class="msg-mdl">${m.model}</span>`:'';
+  w.innerHTML=`<div class="msg-av">${isU?'U':'AI'}</div><div class="msg-bd"><div class="msg-ct">${isU?esc(m.content).replace(/\n/g,'<br>'):md(m.content)}</div><div class="msg-tm">${fmtT(m.ts)} ${modelBadge} ${rg}</div></div>`;
   const rb=w.querySelector('.msg-rg');if(rb)rb.onclick=e=>{e.stopPropagation();if(!S.gen)sendMsg(m.id)};
   $('#msgs').appendChild(w);return w}
 function rMsgs(){const el=$('#msgs');el.innerHTML='';const s=cur();if(!s)return;const ms=s.msgs,tot=ms.length,start=showAll?0:Math.max(0,tot-MP);if(start>0){const b=document.createElement('button');b.className='lmore';b.textContent=`↑ ${start} more`;b.onclick=()=>{showAll=true;rMsgs()};el.appendChild(b)}for(let i=start;i<tot;i++)rMsg(ms[i]);scrollB(0)}
 function scrollB(sm=1){const el=$('#msgs');if(sm)requestAnimationFrame(()=>el.scrollTo({top:el.scrollHeight,behavior:'smooth'}));else el.scrollTop=el.scrollHeight}
 let _slH='';function rSL(){const h=S.sessions.map(s=>s.id+s.ut+s.name).join('|')+(S.aid||'');if(h===_slH)return;_slH=h;const el=$('#sbl');el.innerHTML='';for(const s of S.sessions){const d=document.createElement('div');d.className=`sbi${s.id===S.aid?' on':''}`;d.innerHTML=`<div class="sbi-n">${esc(s.name)}</div><div class="sbi-d">${fmtD(s.ut)}</div><button class="sbi-x">✕</button>`;d.onclick=e=>{if(e.target.closest('.sbi-x'))return;swS(s.id);closeSB()};d.querySelector('.sbi-x').onclick=e=>{e.stopPropagation();if(S.sessions.length<=1||confirm(t('dc')))delS(s.id)};el.appendChild(d)}}
-function rAct(){const s=cur();if(!s)return;$('#sn').textContent=s.name;showAll=false;rMsgs();updFileTabs();rDoc();chkApi();updBtns()}
+function rAct(){const s=cur();if(!s)return;$('#sn').textContent=s.name;showAll=false;rMsgs();updFileTabs();rDoc();chkApi();updBtns();updTokUI()}
 
 /* File tabs */
 function updFileTabs(){const s=cur();const hasA=s&&s.agent&&(s.agent.system||s.agent.workflow);
   $$('.ftab.agent-tab').forEach(b=>b.classList.toggle('disabled',!hasA));
   $$('.ftab').forEach(b=>b.classList.toggle('on',b.dataset.file===activeFile))}
 function switchFile(f){const s=cur();
-  if(['system','workflow','skill'].includes(f)&&(!s?.agent||!s.agent[f])){toast(t('agentEmpty'),'i');return}
+  if(['system','workflow','skill','guide'].includes(f)&&(!s?.agent||!s.agent[f])){toast(t('agentEmpty'),'i');return}
   activeFile=f;updFileTabs();rDoc()}
 
-/* Right panel: renders active file */
 function rDoc(){const s=cur();const el=$('#rpcnt');
   if(activeFile==='prd'){
     if(!s?.prd){el.innerHTML=`<div class="pemp"><h3>${t('pet')}</h3><p>${t('ped')}</p></div>`;$('#sfb').classList.add('hid');return}
@@ -429,14 +667,14 @@ function updI(){const h=$('#ci').value.trim().length>0,k=!!S.stg.apiKey;$('#bsnd
 function chkApi(){$('#apn').classList.toggle('hid',!!S.stg.apiKey)}
 function autoR(){const e=$('#ci');e.style.height='auto';e.style.height=Math.min(e.scrollHeight,140)+'px'}
 function tipOnce(id,m){if(tips[id])return;tips[id]=1;try{sessionStorage.setItem('tips',JSON.stringify(tips))}catch(e){}const el=document.createElement('div');el.style.cssText='position:fixed;z-index:60;background:var(--ac);color:#fff;border-radius:var(--rl);padding:10px 30px 10px 14px;font-size:12px;max-width:280px;box-shadow:var(--sl)';el.innerHTML=`<button style="position:absolute;top:4px;right:6px;color:rgba(255,255,255,.7);cursor:pointer;background:none;border:none;font-size:13px" onclick="this.parentElement.remove()">✕</button>${m}`;document.body.appendChild(el);const r=$('#msgs').getBoundingClientRect();el.style.top=Math.min(r.top+8,innerHeight-80)+'px';el.style.left=Math.max(12,r.left+12)+'px';setTimeout(()=>el.parentElement&&el.remove(),8000)}
-function submitFb(){const sec=$('#sfb').dataset.s,fb=$('#sfi').value.trim();if(!fb)return;$('#sfb').classList.add('hid');const s=cur();if(s){if(!s.fb)s.fb={};s.fb[sec]=(s.fb[sec]||0)+1;save()}$('#ci').value=`[${t('fo')} "${sec}"]: ${fb}`;autoR();sendMsg();if(innerWidth<=768)setMT('chat')}
+function submitFb(){const sec=$('#sfb').dataset.s,fb=$('#sfi').value.trim();if(!fb)return;$('#sfb').classList.add('hid');const s=cur();if(s){if(!s.fb)s.fb={};s.fb[sec]=(s.fb[sec]||0)+1;save()}$('#ci').value=`[${t('fo')} "${sec}"]: ${fb}`;autoR();sendMsg(null,'chat');if(innerWidth<=768)setMT('chat')}
 
 /* Tutorial */
 const TUT=[{t:'.cin',p:'top',k:'t1'},{t:'#qact',p:'top',k:'t2'},{t:'#ftabs',p:'bottom',k:'t3'},{t:'#bsav',p:'right',k:'t4'}];
 function startT(){tutS=0;$('#tov').style.display='block';$('#tov').classList.add('on');showTS()}
 function endT(){$('#tov').classList.remove('on');$('#tov').style.display='none';svL('tut',1)}
 function showTS(){if(tutS<0||tutS>=TUT.length){endT();return}const s=TUT[tutS],el=$(s.t);if(!el||!el.offsetParent){tutS++;showTS();return}const r=el.getBoundingClientRect();$('#tsp').style.cssText=`top:${r.top-4}px;left:${r.left-4}px;width:${r.width+8}px;height:${r.height+8}px`;$('#tti').textContent=t(s.k+'i');$('#tts').textContent=t('tst')+` ${tutS+1}/${TUT.length}`;$('#tth').textContent=t(s.k+'t');$('#ttx').textContent=t(s.k+'x');$('#tpv').style.visibility=tutS===0?'hidden':'visible';$('#tpv').textContent=t('tb');$('#tnx').textContent=tutS===TUT.length-1?t('td'):t('tn');$('#tsk').textContent=t('tsk');const d=$('#ttd');d.innerHTML='';for(let i=0;i<TUT.length;i++){const dot=document.createElement('div');dot.className='tdot'+(i===tutS?' on':'');d.appendChild(dot)}const tt=$('#ttp');tt.style.cssText='';requestAnimationFrame(()=>{const tr=tt.getBoundingClientRect(),g=14;if(s.p==='top')tt.style.cssText=`bottom:${innerHeight-r.top+g}px;left:${Math.max(12,Math.min(r.left,innerWidth-tr.width-12))}px`;else if(s.p==='bottom')tt.style.cssText=`top:${r.bottom+g}px;left:${Math.max(12,Math.min(r.left,innerWidth-tr.width-12))}px`;else tt.style.cssText=`top:${Math.max(12,r.top)}px;left:${Math.min(r.right+g,innerWidth-tr.width-12)}px`})}
-function dismissI(){const k=$('#iak').value.trim(),m=$('#imd').value;if(k){S.stg.apiKey=k;S.stg.model=m;svL('stg',S.stg)}$('#intro')?.classList.add('out');setTimeout(()=>{$('#intro')?.remove();chkApi();updI();updBtns();if(!ldL('tut',0))setTimeout(startT,300)},400);svL('intro',1)}
+function dismissI(){const k=$('#iak').value.trim();if(k){S.stg.apiKey=k;svL('stg',S.stg)}$('#intro')?.classList.add('out');setTimeout(()=>{$('#intro')?.remove();chkApi();updI();updBtns();if(!ldL('tut',0))setTimeout(startT,300)},400);svL('intro',1)}
 
 function setTh(t){$('#app').dataset.theme=t;svL('th',t);$('#isun').style.display=t==='dark'?'none':'block';$('#imn').style.display=t==='dark'?'block':'none'}
 function togSB(){S.sbOpen=!S.sbOpen;$('#sb').classList.toggle('off',!S.sbOpen);$('#sbov').classList.toggle('show',S.sbOpen)}
@@ -447,9 +685,9 @@ function setMT(tab){S.mtab=tab;$$('.mtb').forEach(b=>{b.classList.toggle('on',b.
   else if(tab==='chat'&&innerWidth<=768)$('#rp').style.display='none'}
 let _tx=0,_ty=0;function initSwipe(){const el=$('#cntA');if(!el)return;el.addEventListener('touchstart',e=>{_tx=e.touches[0].clientX;_ty=e.touches[0].clientY},{passive:true});el.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-_tx,dy=e.changedTouches[0].clientY-_ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){dx<-30?setMT('docs'):setMT('chat')}},{passive:true})}
 function initResize(){let r=0,sx,sw;$('#rsh').onmousedown=e=>{r=1;sx=e.clientX;sw=$('#cp').getBoundingClientRect().width;$('#rsh').classList.add('on');document.body.style.cursor='col-resize';document.body.style.userSelect='none';e.preventDefault()};document.onmousemove=e=>{if(!r)return;const cw=$('#cp').parentElement.getBoundingClientRect().width;$('#cp').style.flex=`0 0 ${Math.max(260,Math.min(cw-280,sw+e.clientX-sx))/cw*100}%`};document.onmouseup=()=>{if(!r)return;r=0;$('#rsh').classList.remove('on');document.body.style.cursor='';document.body.style.userSelect=''}}
-function openSet(){$('#sak').value=S.stg.apiKey;$('#smd').value=S.stg.model;$('#smt').value=S.stg.maxTokens;$('#stm').value=S.stg.temperature;$('#stmv').textContent=S.stg.temperature;$('#ssp').value=S.stg.sp||'';$('#smod').classList.remove('hid')}
+function openSet(){$('#sak').value=S.stg.apiKey;$('#smt').value=S.stg.maxTokens;$('#stm').value=S.stg.temperature;$('#stmv').textContent=S.stg.temperature;$('#ssp').value=S.stg.sp||'';$('#smod').classList.remove('hid')}
 function closeSet(){$('#smod').classList.add('hid')}
-function saveSet(){S.stg.apiKey=$('#sak').value.trim();S.stg.model=$('#smd').value;S.stg.maxTokens=parseInt($('#smt').value)||75000;S.stg.temperature=parseFloat($('#stm').value)||.6;S.stg.sp=$('#ssp').value.trim();svL('stg',S.stg);closeSet();chkApi();updI();updBtns();toast(t('sv'),'s')}
+function saveSet(){S.stg.apiKey=$('#sak').value.trim();S.stg.maxTokens=parseInt($('#smt').value)||65536;S.stg.temperature=parseFloat($('#stm').value)||.6;S.stg.sp=$('#ssp').value.trim();svL('stg',S.stg);closeSet();chkApi();updI();updBtns();toast(t('sv'),'s')}
 
 function bind(){
   $('#bsb').onclick=togSB;$('#sbov').onclick=closeSB;$('#bnew').onclick=()=>{mkS();rSL();rAct();closeSB()};
@@ -463,7 +701,6 @@ function bind(){
   $('#bapn').onclick=openSet;$('#bthm').onclick=()=>setTh($('#app').dataset.theme==='dark'?'light':'dark');
   $$('.hlgb').forEach(b=>b.onclick=()=>setL(b.dataset.lang));
   $$('.mtb').forEach(b=>b.onclick=()=>setMT(b.dataset.tab));
-  /* File tabs */
   $$('.ftab').forEach(b=>b.onclick=()=>{if(b.classList.contains('disabled'))return;switchFile(b.dataset.file)});
   $('#rexmd').onclick=exMd;$('#rexcp').onclick=cpCl;
   $('#bsfx').onclick=()=>$('#sfb').classList.add('hid');$('#bsff').onclick=submitFb;$('#sfi').onkeydown=e=>{if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();submitFb()}};
@@ -477,9 +714,15 @@ function bind(){
 }
 
 async function init(){
-  initMd();lang=ldL('lang','en');Object.assign(S.stg,ldL('stg',{}));
-  if(S.stg.model?.includes('-preview-'))S.stg.model=S.stg.model.replace(/-preview-[\d-]+/,'');
-  if(!S.stg.maxTokens||S.stg.maxTokens<10000)S.stg.maxTokens=75000;
+  initMd();lang=ldL('lang','en');
+  const savedStg=ldL('stg',{});
+  /* Migrate: remove old model field, keep apiKey/temp/etc */
+  S.stg.apiKey=savedStg.apiKey||'';
+  S.stg.maxTokens=savedStg.maxTokens||65536;
+  S.stg.temperature=savedStg.temperature||.6;
+  S.stg.sp=savedStg.sp||'';
+  if(S.stg.maxTokens<4096)S.stg.maxTokens=65536;
+
   setTh(ldL('th','light'));
   try{await IDB.open()}catch(e){}
   const alive=sessionStorage.getItem('prdg_alive');sessionStorage.setItem('prdg_alive','1');
@@ -490,7 +733,11 @@ async function init(){
   if(!S.sessions.length)mkS();
   else if(!S.aid||!S.sessions.find(s=>s.id===S.aid))S.aid=S.sessions[0].id;
   /* Migrate old sessions */
-  for(const s of S.sessions){if(!s.agent)s.agent={system:'',workflow:'',skill:''};if(!s.prd){detectPrd(s)}}
+  for(const s of S.sessions){
+    if(!s.agent)s.agent={system:'',workflow:'',skill:'',guide:''};
+    if(!s.tokens)s.tokens={in:0,out:0};
+    if(!s.prd)detectPrd(s);
+  }
   if(!ldL('intro',0))$('#intro').classList.remove('hid');else $('#intro')?.remove();
   bind();rSL();rAct();
   const c=cur();if(c&&c.msgs.length===1&&c.msgs[0].id[0]==='w'){c.msgs[0].content=t('w');rMsgs()}
@@ -498,5 +745,4 @@ async function init(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 </script>
-
 </body></html>
