@@ -223,9 +223,10 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 <div class="iapi"><h2 data-t="akt">API Key</h2><p data-t="akd">Uses Gemini AI. Free — 30s.</p><div style="text-align:center;margin-bottom:10px"><a href="https://aistudio.google.com/apikey" target="_blank"><span data-t="gk">Get Key →</span></a></div>
 <div style="margin-bottom:8px"><label data-t="akl">API Key</label><input type="password" id="iak" data-t-placeholder="akp"></div>
 <div class="mroute">
-  <div class="mroute-r"><span class="mroute-b ch">💬 Chat</span> gemma-4-31b-it</div>
-  <div class="mroute-r"><span class="mroute-b gn">🧠 Create</span> gemini-3.1-flash-lite-preview</div>
-  <div class="mroute-fb">↳ Fallback: gemini-2.5-flash → gemma-4-31b-it</div>
+  <div class="mroute-r"><span class="mroute-b ch">💬 Chat</span> gemini-3.1-flash-lite-preview</div>
+  <div class="mroute-fb">↳ Fallback: gemma-4-31b-it</div>
+  <div class="mroute-r"><span class="mroute-b gn">🧠 Create</span> gemini-flash-latest</div>
+  <div class="mroute-fb">↳ Fallback: gemini-2.5-pro → gemini-2.5-flash → gemini-2.0-flash</div>
 </div>
 <p class="ihn" data-t="akh">🔒 Browser only.</p></div>
 <div class="icta-a"><button class="icta" onclick="dismissI()">🚀 <span data-t="go">Go!</span></button><button class="iskip" onclick="dismissI()" data-t="sk">Later</button></div>
@@ -267,9 +268,10 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 <div class="fg"><label data-t="akl">API Key</label><input type="password" id="sak" data-t-placeholder="akp"><div class="hn"><a href="https://aistudio.google.com/apikey" target="_blank" style="color:var(--ac)" data-t="gk">Get Key →</a></div></div>
 <div class="fg"><label data-t="mrl">Model Routing</label>
 <div class="minfo">
-  <div class="minfo-r"><span class="minfo-b ch">💬 Chat</span> <code>gemma-4-31b-it</code></div>
-  <div class="minfo-r"><span class="minfo-b gn">🧠 Create</span> <code>gemini-3.1-flash-lite-preview</code></div>
-  <div class="minfo-fb">↳ Fallback: <code>gemini-2.5-flash</code> → <code>gemma-4-31b-it</code></div>
+  <div class="minfo-r"><span class="minfo-b ch">💬 Chat</span> <code>gemini-3.1-flash-lite-preview</code></div>
+  <div class="minfo-fb">↳ Fallback: <code>gemma-4-31b-it</code></div>
+  <div class="minfo-r" style="margin-top:4px"><span class="minfo-b gn">🧠 Create</span> <code>gemini-flash-latest</code></div>
+  <div class="minfo-fb">↳ Fallback: <code>gemini-2.5-pro</code> → <code>gemini-2.5-flash</code> → <code>gemini-2.0-flash</code></div>
 </div>
 <div class="hn" data-t="mrh">Auto-routed. Chat uses fast model, generation uses smart model with fallbacks.</div>
 </div>
@@ -284,10 +286,14 @@ select{-webkit-appearance:none;appearance:none;background-image:url("data:image/
 <script>
 /* ═══════════════════════════════════════════════════════════════
    MODEL ROUTING & CONSTANTS
+   ═══════════════════════════════════════════════════════════════
+   Chat   : gemini-3.1-flash-lite-preview → gemma-4-31b-it
+   Create : gemini-flash-latest → gemini-2.5-pro → gemini-2.5-flash → gemini-2.0-flash
+   Fallback is automatic — no user confirmation needed.
    ═══════════════════════════════════════════════════════════════ */
-const CHAT_MODELS   = ['gemma-4-31b-it'];
-const GEN_MODELS    = ['gemini-3.1-flash-lite-preview','gemini-2.5-flash','gemma-4-31b-it'];
-const TITLE_MODELS  = ['gemma-4-31b-it','gemini-2.5-flash'];
+const CHAT_MODELS   = ['gemini-3.1-flash-lite-preview','gemma-4-31b-it'];
+const GEN_MODELS    = ['gemini-flash-latest','gemini-2.5-pro','gemini-2.5-flash','gemini-2.0-flash'];
+const TITLE_MODELS  = ['gemini-3.1-flash-lite-preview','gemma-4-31b-it'];
 const CHAT_CTX      = 12;   // context window: last 12 msgs for chat (saves tokens)
 const CHAT_MAX_TOK  = 4096; // cap chat output (short answers)
 const GEN_MAX_TOK_D = 65536;// default gen output
@@ -353,7 +359,7 @@ procMsg:"Use all recommendations. Generate the complete PRD now following your f
 genAgentMsg:"Based on our PRD, generate 3 agent files clearly separated:\n# system-prompt.md (persona, rules, constraints for this product)\n# workflow.md (step-by-step, decision trees, error handling)\n# skill.md (domain knowledge, tools, integrations)\nThen add:\n# 📖 How to Use This PRD + Agent\nInclude deployment steps for each file, quick start, and maintenance tips. Be specific and actionable.",
 pet:'No PRD yet',ped:'Describe your product in chat first.',agentEmpty:'No agent files yet',agentEmptyD:'Generate PRD first, then click "Generate Agent Files".',
 t1i:'💬',t1t:'Type Your Idea',t1x:'Describe what to build. AI interviews + recommends.',t2i:'🚀',t2t:'Send or Process All',t2x:'Answer or click Process All to skip to PRD.',t3i:'📄',t3t:'Docs Panel',t3x:'PRD + Agent files in tabs. Click to switch, review, export each.',t4i:'💾',t4t:'Save & Export',t4x:'Ctrl+S saves project. Export each file as .md or copy.',
-tb:'←',tn:'→',tsk:'Skip',td:'Go! 🚀',tst:'Step',ok:'Copied ✓',dl:'Downloaded ✓',sv:'Saved ✓',ne:'Nothing to export',pr:'Reset ✓',tod:'Today',yes:'Yesterday',dc:'Delete?',er:'Error',gs:'Stopped',fb_m:'Falling back...',
+tb:'←',tn:'→',tsk:'Skip',td:'Go! 🚀',tst:'Step',ok:'Copied ✓',dl:'Downloaded ✓',sv:'Saved ✓',ne:'Nothing to export',pr:'Reset ✓',tod:'Today',yes:'Yesterday',dc:'Delete?',er:'Error',gs:'Stopped',fb_m:'Falling back →',
 c1:'AI is interviewing you. Answer or hit Process All. 👇',c2:'PRD ready! 🎉 Click "Generate Agent Files" for the next step.',c3:'Agent files ready! 🤖 Check the tabs in the docs panel.',
 w:"Hey! 👋 I'm your PRD + Agent generator.\n\nDescribe what to build. I ask 3-5 questions per round with recommendations.\n\nAfter the PRD, I generate AI Agent files (system-prompt, workflow, skill).\n\nWhat are we building?"},
 id:{ib:'AI PRD + Agent',it:'Bikin Produk Lebih Oke',is:'AI bikin PRD terus generate file Agent.',step:'Langkah',s1t:'Ceritain',s1d:'Ide kamu',s2t:'Interview',s2d:'AI nanya+rekom',s3t:'PRD',s3d:'Dokumen lengkap',s4t:'Agent',s4d:'3 file',s5t:'Export',s5d:'Gas',akt:'API Key',akd:'Pake Gemini. Gratis — 30dtk.',gk:'Ambil Key →',akl:'API Key',akp:'Paste key...',ml:'Model',mrl:'Routing Model',mrh:'Auto-routing. Chat pake model cepat, generate pake model pintar + fallback.',akh:'🔒 Di browser aja.',go:'Gas! 🚀',sk:'Nanti',ses:'Sesi',set:'Pengaturan',cp:'Mau bikin apa?',sh:'Ctrl+Enter kirim · Ctrl+S simpan',thk:'Mikir...',an:'Butuh API key.',co:'Salin',fo:'Feedback untuk',fp:'Apa yang diubah?',sf:'Kirim',mtl:'Max Token (Generate)',spl:'Override System Prompt',sph:'Kosongin buat default yang udah dioptimasi.',rst:'Reset',sav:'Simpan',sp:'💾 Simpan',lp:'📂 Buka',rt:'🔄 Tutorial',psv:'Tersimpan ✓',pld:'Dimuat ✓',ivf:'File gak valid',regen:'Ulang',proc:'🚀 Proses semua → PRD',genAgent:'🤖 Generate File Agent',
@@ -361,7 +367,7 @@ procMsg:"Pake semua rekomendasi. Bikin PRD lengkap sekarang sesuai format yang d
 genAgentMsg:"Berdasarkan PRD, generate 3 file agent terpisah:\n# system-prompt.md (persona, aturan, batasan produk ini)\n# workflow.md (step-by-step, decision tree, error handling)\n# skill.md (skill domain, tools, integrasi)\nTerus tambahin:\n# 📖 Cara Pake PRD + Agent Ini\nSertakan cara deploy tiap file, quick start, dan tips maintenance. Bikin spesifik dan actionable.",
 pet:'Belum ada PRD',ped:'Ceritain ide di chat dulu.',agentEmpty:'Belum ada file agent',agentEmptyD:'Bikin PRD dulu, terus klik "Generate File Agent".',
 t1i:'💬',t1t:'Ketik Ide',t1x:'Ceritain mau bikin apa. AI nanya + rekomendasiin.',t2i:'🚀',t2t:'Kirim atau Proses Semua',t2x:'Jawab atau klik Proses Semua buat skip ke PRD.',t3i:'📄',t3t:'Panel Dokumen',t3x:'PRD + file Agent di tab. Klik buat ganti, review, export masing-masing.',t4i:'💾',t4t:'Simpan & Export',t4x:'Ctrl+S simpan proyek. Export tiap file jadi .md atau copy.',
-tb:'←',tn:'→',tsk:'Skip',td:'Gas! 🚀',tst:'Langkah',ok:'Ke-copy ✓',dl:'Ke-download ✓',sv:'Tersimpan ✓',ne:'Belum ada',pr:'Reset ✓',tod:'Hari ini',yes:'Kemarin',dc:'Hapus?',er:'Error',gs:'Dihentiin',fb_m:'Coba model lain...',
+tb:'←',tn:'→',tsk:'Skip',td:'Gas! 🚀',tst:'Langkah',ok:'Ke-copy ✓',dl:'Ke-download ✓',sv:'Tersimpan ✓',ne:'Belum ada',pr:'Reset ✓',tod:'Hari ini',yes:'Kemarin',dc:'Hapus?',er:'Error',gs:'Dihentiin',fb_m:'Coba model lain →',
 c1:'AI lagi wawancara. Jawab atau klik Proses Semua. 👇',c2:'PRD jadi! 🎉 Klik "Generate File Agent" buat langkah selanjutnya.',c3:'File agent jadi! 🤖 Cek tab di panel dokumen.',
 w:"Halo! 👋 Aku PRD + Agent generator kamu.\n\nCeritain mau bikin apa. Aku nanya 3-5 per ronde + kasih rekomendasi.\n\nSetelah PRD jadi, aku bikinin file AI Agent (system-prompt, workflow, skill).\n\nMau bikin apa?"}};
 
@@ -402,11 +408,14 @@ function isAgent(c){return/^#\s*system-prompt/mi.test(c)&&/^#\s*workflow/mi.test
 function parseAgent(c){const a={system:'',workflow:'',skill:'',guide:''};let cur='';for(const line of c.split('\n')){if(/^#\s*system-prompt/i.test(line)){cur='system';a[cur]+=line+'\n'}else if(/^#\s*workflow/i.test(line)){cur='workflow';a[cur]+=line+'\n'}else if(/^#\s*skill/i.test(line)){cur='skill';a[cur]+=line+'\n'}else if(/^#\s*.*(?:How to Use|Cara Pake)/i.test(line)){cur='guide';a[cur]+=line+'\n'}else if(cur){if(line.trim()==='---'&&!a[cur].trim())continue;a[cur]+=line+'\n'}}for(const k in a)a[k]=a[k].trim();return a}
 
 /* ═══════════════════════════════════════════════════════════════
-   GEMINI API — with model routing & fallback
+   GEMINI API — with model routing & automatic fallback
    ═══════════════════════════════════════════════════════════════
    purpose: 'chat' | 'generate'
-   Chat    → gemma-4-31b-it (fast, conversational)
-   Generate → gemini-3.1-flash-lite-preview → gemini-2.5-flash → gemma-4-31b-it
+   Chat     → gemini-3.1-flash-lite-preview → gemma-4-31b-it
+   Generate → gemini-flash-latest → gemini-2.5-pro → gemini-2.5-flash → gemini-2.0-flash
+
+   On failure, automatically tries the next model in the chain.
+   No user confirmation required — only a toast notification.
    ═══════════════════════════════════════════════════════════════ */
 function getSP(purpose){
   if(S.stg.sp?.trim())return S.stg.sp; // user override
@@ -458,7 +467,11 @@ async function* streamG(messages,purpose){
 
     try{
       updTypModel(model);
-      if(ci>0)toast(t('fb_m')+' '+model,'i');
+      /* Automatic fallback — show toast, no confirmation */
+      if(ci>0){
+        console.log(`[Fallback] Now trying: ${model}`);
+        toast(t('fb_m')+' '+model,'i');
+      }
 
       const url=`https://generativelanguage.googleapis.com/v1beta/models/${model}:streamGenerateContent?alt=sse&key=${s.apiKey}`;
 
@@ -524,16 +537,17 @@ async function* streamG(messages,purpose){
       if(e.name==='AbortError')throw e;
       /* Don't fallback if already streaming (mid-stream failure) */
       if(hasYielded)throw e;
-      /* Last model — give up */
+      /* Last model in chain — give up */
       if(ci===chain.length-1)throw e;
 
+      /* Automatic fallback to next model — no confirmation */
       console.warn(`[Fallback] ${model} failed: ${e.message}, trying ${chain[ci+1]}...`);
     }
   }
   throw lastErr;
 }
 
-/* Auto-title — uses fast chat model with fallback */
+/* Auto-title — uses chat model chain with automatic fallback */
 async function autoTitle(msg){
   for(const model of TITLE_MODELS){
     try{
@@ -554,7 +568,7 @@ async function autoTitle(msg){
         }
         return;
       }
-    }catch(e){console.warn(`autoTitle ${model} fail:`,e.message)}
+    }catch(e){console.warn(`[autoTitle fallback] ${model} fail:`,e.message)}
   }
 }
 
