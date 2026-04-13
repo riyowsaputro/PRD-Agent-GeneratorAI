@@ -119,32 +119,6 @@ All libraries loaded from CDN. Total page weight ~250KB (mostly the parsing libr
 
 **How to Use guide** — Deployment steps for each file, quick start instructions, maintenance tips.
 
----
-
-## Project File Format
-
-Saved projects use `.prd.json` with this structure:
-
-```json
-{
-"v": 5,
-"s": {
-  "name": "Session title",
-  "ts": 1713000000000,
-  "ut": 1713000000000,
-  "msgs": [],
-  "prd": "# PRD content...",
-  "agent": {
-    "system": "...",
-    "workflow": "...",
-    "skill": "...",
-    "guide": "..."
-  },
-  "fb": {},
-  "tokens": { "in": 0, "out": 0 }
-}
-}
-
 Attachment content is included in the saved file (so references persist across loads).
 
 Configuration
@@ -189,3 +163,32 @@ MIT
 
 Author
 Rio Saputro
+
+---
+
+## Project File Format
+
+Saved projects use `.prd.json` with this structure:
+
+```json
+{
+"v": 5,
+"s": {
+  "name": "Session title",
+  "ts": 1713000000000,
+  "ut": 1713000000000,
+  "msgs": [],
+  "prd": "# PRD content...",
+  "agent": {
+    "system": "...",
+    "workflow": "...",
+    "skill": "...",
+    "guide": "..."
+  },
+  "fb": {},
+  "tokens": { "in": 0, "out": 0 }
+}
+}
+
+
+
